@@ -10,6 +10,10 @@
         Messages: Array<string>;
     }
 
+    export interface IAdminScope extends IBaseScope {
+        Messages: Array<string>;
+    }
+
     export interface IMenuScope extends IBaseScope {
         NewClientName: string;
         AddNewClientName: boolean;

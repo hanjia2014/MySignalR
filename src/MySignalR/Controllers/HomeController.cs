@@ -35,5 +35,10 @@ namespace MySignalR
         {
             return View();
         }
+
+        public IActionResult Admin()
+        {
+            return View();
+        }
     }
 }
