@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.2.0.js"></script>
+<script src="@Url.Content("~/signalr/hubs")"></script>
+<script src="~/scripts/angular.js"></script>
+
+<script src="~/app/app.modules.js"></script>
+<script src="~/app/controllers/BaseController.js"></script>
+<script src="~/app/controllers/HomeController.js"></script>
+<script src="~/app/services/menuservice.js"></script>
+<script src="~/app/services/storageservice.js"></script>
+<script src="~/app/models/order.js"></script>
+
+<div data-ng-app="hotmenuApp" data-ng-controller="HotmenuApp.Controllers.HomeController as homeController">
+<h1 data-ng-click="homeController.sendMessage()">Index</h1>
+
+    <div data-ng-repeat="message in Messages">
+        {{message}}
+    </div>
+</div>
