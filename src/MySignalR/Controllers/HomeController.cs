@@ -40,5 +40,12 @@ namespace MySignalR
         {
             return View();
         }
+
+
+        public IActionResult Test(string data)
+        {
+            _productMessageHub.Clients.All.handleProductMessage(data);
+            return RedirectToAction("Admin");
+        }
     }
 }

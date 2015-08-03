@@ -3,7 +3,7 @@
 }
 
 @*<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.2.0.js"></script>*@
+    <script src="http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.2.0.js"></script>*@
 
 <script src="~/scripts/jquery-2.1.1.min.js"></script>
 <script src="~/scripts/jquery.signalr-2.1.2.min.js"></script>
@@ -20,8 +20,12 @@
 <script src="~/app/controllers/admincontroller.js"></script>
 
 <div data-ng-app="hotmenuApp" data-ng-controller="HotmenuApp.Controllers.AdminController as adminController">
-    <h1>Admin</h1>
-    <div data-ng-repeat="message in Messages">
-        {{message}}
-    </div>
+    <form>
+        <h1>Admin</h1>
+        <input type="text" data-ng-model="inputData" />
+        @Html.ActionLink("Submit", "Test", new { data = "test" });
+        <div data-ng-repeat="message in Messages">
+            {{message}}
+        </div>
+    </form>
 </div>
